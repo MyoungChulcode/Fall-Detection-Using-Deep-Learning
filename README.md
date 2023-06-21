@@ -8,10 +8,12 @@
 
 # Project explanation
 **1. 프로젝트 선정 배경 및 필요성**
+  
   3학년 2학기 데이터분석 캡스톤디자인에서 “범죄 분석을 위한 이상치 탐색 및 클러스터링”을 주제로 연구를 진행하였다. 이상치 탐지 모델로 CNN 구조의 C3D, R3D를 사용하였지만 이상치 데이터의 특징을 고려한다면 이상치 프레임은 희소하게 발생할 확률이 높으며 그룹 내에서 정상 프레임에 의해 편향될 가능성이 존재한다. 이에 본 연구에서는 R-C3D base object detection을 활용한 이상치 탐지 모델을 개발할 것이다. 특히 낙상 감지는 bounding box 내에서 temporal information이 중요하기 때문에 기존에 있던 시스템에 비해 빠르게 정확하게 감지할 것으로 기대한다.
 
 
 **2. 프로젝트 주요 내용**
+ 
  본 연구는 [ICCV 2017] R-C3D Region Convolutional 3D Network for Temporal Activity Detection 논문에서 제안하는 R-C3D 모델을 사용하여 낙상 감지 시스템에 적용한다.
 1) AI-HUB에서 낙상 안전사고 data-set 다운로드
 2) 낙상 발생구간에 대한 temporal annotation file(xml or json) 확인 후 조정
@@ -23,6 +25,7 @@
 
 
 **3. 목표 및 방법**
+
 낙상 안전사고를 감지하는 모델을 설계하고 어플리케이션 레벨까지 시각화하는 프로그램을 개발
 1) 활용 장비: 연구실, 개인 PC(3070 GPU 1대, 3060 GPU 1대) 및 연구실 서버를 활용
 2) 사람, 이상치 데이터 셋: MPII, FPDS, COCO, AI-HUB(시니어 이상행동 영상)
@@ -43,6 +46,7 @@
 2) 노인 낙상은 낙상으로 인한 사망 이외에도 중증의 손상으로 인해 삶의 질이 현저하게 감소하는 문제를 초래한다. 딥러닝 모델을 활용하여 자동으로 낙상을 감지하는 시스템을 개발하면 사고에 대한 적절한 손상 예방과 대처에 큰 기여를 할 것으로 기대한다.
 
 **6. 결론 및 제언**
+
 Nanodet을 통해 person detection을 수행하고 R-C3D를 통해 UCF-101의 action recognition task를 수행하였다. R-C3D model을 활용하여 anomaly detection을 수행하였을 때, 성능 개선이 있는지 아직 실험을 못 하였다. 해당 부분에 대한 실험과 연구가 더욱 필요하다.
 
 # Demo example
